@@ -8,14 +8,15 @@ int main() {
   map<char,int> abecedario;
   map<char,int>::iterator it;
   getline(cin, texto);
-  cout<<texto<<endl;
+  abecedario['a']=0;
+  abecedario['e']=0;
+  abecedario['i']=0;
+  abecedario['o']=0;
+  abecedario['u']=0;
   for(int i=0; i<texto.length(); ++i){
     it=abecedario.find(texto[i]);
     if (it != abecedario.end()){
       abecedario[texto[i]]+=1;
-    }
-    else{
-      abecedario.emplace(texto[i],1);
     }
   }
 
